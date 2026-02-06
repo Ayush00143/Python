@@ -1,0 +1,11 @@
+x=2
+y=4
+try:
+    print(x/y)
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+except TypeError:
+    print("You can't divide a number by a string!")
+except Exception:
+    print("An error occurred.")
+    
