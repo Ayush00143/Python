@@ -1,0 +1,180 @@
+
+import pandas as pd
+marks=pd.Series([78,85,90,66])
+print (marks)
+print("Types of values: ", marks.values)
+print("Types of index: ", marks.index)
+
+
+
+
+
+import pandas as pd
+marks=pd.Series([78,85,90,66], index=['a','b','c','d'])
+print (marks)
+print("Types of values: ", marks.values)
+print("Types of index: ", marks.index)
+
+
+
+
+marks=pd.Series([78,85,90,66], index=['a','b','c','d'])
+print("Access Element: ", marks["a"])
+
+
+
+
+
+marks1=pd.Series([78,85,90,66], index=['a','b','c','d'])
+print("Explicit Index include: ", marks1["a":"c"])
+
+
+
+
+marks=pd.Series([78,85,90,66], index=['a','b','c','d'])
+print("Implicit Index include: ", marks[0:3])
+
+
+
+
+marks=pd.Series([78,85,90,66], index=[1,2,3,4])
+print(marks[1])
+print(marks.iloc[0])
+print(marks.loc[1])
+
+
+
+
+
+marks1=pd.Series([78,85,90,66], index=[1,2,3,4])
+print("Implicit:",marks1.iloc[1:2])
+print("Emplicit:",marks1.loc[1:2])
+
+
+
+
+
+dict={"A":10,"B":20,"C":30,"D":40}
+marks=pd.Series(dict)
+print("Series Object From Dictionary: ",marks)
+
+
+
+
+dict={"A":10,"B":20,"C":30,"D":40}
+marks=pd.Series(dict)
+print("Access with labe-based slicing (explicit index): ",marks["A":"C"])
+print("Access with position-based slicing: ",marks[0:2])
+
+
+
+
+dict={0:10,1:20,2:30,3:40}
+marks=pd.Series(dict)
+print("Access with implicit index: ", marks.iloc[0:2])
+print("Access with explicit index: ", marks.loc[0:2])
+
+
+
+
+
+import pandas as pd
+data = {
+    "Name":["Aryan","Jai","Dhruvi"],
+    "Marks":[98,94,91]
+}
+df = pd.DataFrame(data)
+print(df)
+
+
+
+
+
+import pandas as pd
+data = [
+    {"Name":"Aryan","Marks":90},
+    {"Name":"Jai","Marks":87},
+    {"Name":"Dhruvi","Marks":58}
+]
+df = pd.DataFrame(data)
+print(df)
+
+
+
+
+import pandas as pd
+data = [
+    ["Aryan",98],
+    ["Jai",94],
+    ["Dhruvi",90]
+]
+df=pd.DataFrame(data,columns=["Name","Marks"])
+print(df)
+
+
+
+
+import pandas as pd
+s1=pd.Series([10,20,30])
+s2=pd.Series(["Aryan","Jai","Dhruvi"])
+df=pd.DataFrame({"Marks":s1,"Name":s2})
+print(df)
+
+
+
+
+
+df=pd.read_csv("students.csv")
+print(df)
+
+
+
+
+
+import pandas as pd
+data = {
+    "Name":["Aryan","Jai","Dhruvi"],
+    "Marks":[98,94,91]
+}
+df = pd.DataFrame(data)
+print(df)
+print(df.shape)
+print(df.dtypes)
+print(df.columns)
+print(df.index)
+print(df.head())
+print(df.tail())
+print(df.info())
+print(df.describe())
+
+
+
+
+
+import pandas as pd
+df=pd.read_csv("miss.csv")
+print(df)
+print(df.isnull())
+print(df.isnull().sum())
+df['Grade'].value_counts(dropna=False)
+
+
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+x=[1,2,3,4,5]
+y=[10,20,30,40,50]
+y1=[24,16,9,4,1]
+plt.plot(x,y)
+plt.title("Basic Line Plot")
+plt.xlabel("x-axis")
+plt.ylabel("y-axis")
+plt.grid(True)
+plt.show()
+plt.plot(x,y,y1)
+plt.title("Basic Line Plot")
+plt.xlabel("x-axis")
+plt.ylabel("y-axis")
+plt.grid(True)
+plt.show()
